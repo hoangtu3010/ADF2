@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<Pane fx:controller="assignment1.Controller"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="127.0" layoutY="14.0" prefHeight="21.0" prefWidth="305.0" text="Danh Sách Sinh Viên" textFill="#45caeb">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="34.0" layoutY="81.0" prefHeight="31.0" prefWidth="119.0" promptText="Name" />
+      <TextField fx:id="age" layoutX="163.0" layoutY="81.0" prefHeight="31.0" prefWidth="119.0" promptText="Age" />
+      <TextField fx:id="mark" layoutX="293.0" layoutY="81.0" prefHeight="31.0" prefWidth="119.0" promptText="Mark" />
+      <TextArea fx:id="dsSV" layoutX="35.0" layoutY="157.0" prefHeight="200.0" prefWidth="527.0" style="-fx-border-color: orange;" />
+      <Button onAction="#add" layoutX="430.0" layoutY="81.0" mnemonicParsing="false" style="-fx-background-color: #45caeb;" text="Add" textFill="WHITE" />
+      <Button fx:id="sort" onAction="#sort" layoutX="490.0" layoutY="81.0" mnemonicParsing="false" style="-fx-background-color: #45caeb;" text="Sort" textFill="WHITE" />
+      <Text fx:id="validate" disable="true" fill="RED" layoutX="33.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.6708984375" />
+   </children>
+</Pane>
