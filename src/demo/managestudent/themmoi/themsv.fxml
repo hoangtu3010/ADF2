@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.managestudent.themmoi.themController">
+   <children>
+      <TextField fx:id="inName" layoutX="120.0" layoutY="58.0" prefHeight="51.0" prefWidth="366.0" promptText="Ten sinh vien" />
+      <TextField fx:id="inAge" layoutX="120.0" layoutY="141.0" prefHeight="51.0" prefWidth="366.0" promptText="Tuoi" />
+      <TextField fx:id="inMark" layoutX="120.0" layoutY="225.0" prefHeight="51.0" prefWidth="366.0" promptText="Diem Thi" />
+      <Button layoutX="120.0" layoutY="328.0" mnemonicParsing="false" onAction="#btn_add" prefHeight="40.0" prefWidth="122.0" text="Submit" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#trangChu" text="Trang chủ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text fx:id="validate" disable="true" fill="RED" layoutX="120.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="366.0" />
+   </children>
+</Pane>
