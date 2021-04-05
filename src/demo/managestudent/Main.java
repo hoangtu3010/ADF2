@@ -6,9 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.Locale;
+
 public class Main extends Application {
 
+
     public static void main(String[] args) {
+        Locale vi = new Locale("vi", "VN");
+        Locale.setDefault(vi);
         launch(args);
     }
     public static Stage mainStage;

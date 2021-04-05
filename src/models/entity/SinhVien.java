@@ -1,4 +1,6 @@
-package assignment2;
+package models.entity;
+
+import java.util.ArrayList;
 
 public class SinhVien {
     Integer id;
@@ -6,15 +8,13 @@ public class SinhVien {
     Integer age;
     Integer mark;
 
+    public String[] fillable = {"id","name","age","mark"};
+
     public SinhVien(Integer id, String name, Integer age, Integer mark) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.mark = mark;
-    }
-
-    public SinhVien() {
-
     }
 
     public Integer getId() {

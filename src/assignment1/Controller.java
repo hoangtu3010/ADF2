@@ -1,24 +1,39 @@
 package assignment1;
 
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
     public TextField name;
     public TextField age;
     public TextField mark;
-    public TextArea dsSV;
+    public TableView<SinhVien> ds;
     public Text validate;
     public Button sort;
+    public TableColumn<SinhVien, String> tenSV;
+    public TableColumn<SinhVien, Integer> tuoiSV;
+    public TableColumn<SinhVien, Integer> diemSV;
 
-    private ArrayList<SinhVien> dsSinhVien = new ArrayList<>();
-    public boolean sortType = true;
+    ObservableList<SinhVien> dsSinhVien = FXCollections.observableArrayList();
+    static boolean sortType = true;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        tenSV.setCellValueFactory(new PropertyValueFactory<SinhVien, String>("name"));
+        tuoiSV.setCellValueFactory(new PropertyValueFactory<SinhVien, Integer>("age"));
+        diemSV.setCellValueFactory(new PropertyValueFactory<SinhVien, Integer>("mark"));
+    }
 
     public void add(){
         try {
@@ -32,7 +47,7 @@ public class Controller {
                 for (SinhVien d : dsSinhVien) {
                     txt += d.getName() + " -- " + d.getAge() + " -- " +d.getMark() +"\n";
                 }
-                dsSV.setText(txt);
+                ds.setItems(dsSinhVien);
                 validate.setText("");
                 name.setText("");
                 age.setText("");
@@ -70,6 +85,6 @@ public class Controller {
         for (SinhVien d : dsSinhVien) {
             txt += d.getName() + " -- " + d.getAge() + " -- " +d.getMark() +"\n";
         }
-        dsSV.setText(txt);
+        ds.setItems(dsSinhVien);
     }
 }

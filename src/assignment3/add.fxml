@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<Pane fx:controller="assignment3.modelController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="name" layoutX="180.0" layoutY="53.0" prefHeight="49.0" prefWidth="240.0" promptText="Name" />
+      <TextField fx:id="age" layoutX="180.0" layoutY="127.0" prefHeight="49.0" prefWidth="240.0" promptText="Age" />
+      <TextField fx:id="mark" layoutX="180.0" layoutY="200.0" prefHeight="49.0" prefWidth="240.0" promptText="Mark" />
+      <Button onAction="#back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #fff; -fx-font-weight: 700;" text="&lt;--">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button onAction="#changeSceneAdd" layoutX="249.0" layoutY="289.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #45caeb; -fx-font-weight: 700;" text="Add" textFill="WHITE" />
+   </children>
+</Pane>

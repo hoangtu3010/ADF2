@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment2.Controller">
@@ -12,17 +12,25 @@
             <Font name="Calibri Bold" size="36.0" />
          </font>
       </Label>
-      <TextField fx:id="name" layoutX="534.0" layoutY="127.0" prefHeight="40.0" prefWidth="239.0" promptText="Name" />
-      <TextField fx:id="age" layoutX="534.0" layoutY="180.0" prefHeight="40.0" prefWidth="239.0" promptText="Age" />
-      <TextField fx:id="mark" layoutX="534.0" layoutY="232.0" prefHeight="40.0" prefWidth="239.0" promptText="Mark" />
-      <TableView fx:id="ds" layoutX="33.0" layoutY="127.0" prefHeight="421.0" prefWidth="478.0" style="-fx-border-color: orange;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+      <TextField fx:id="name" layoutX="33.0" layoutY="133.0" prefHeight="40.0" prefWidth="239.0" promptText="Name" />
+      <TextField fx:id="age" layoutX="33.0" layoutY="198.0" prefHeight="40.0" prefWidth="239.0" promptText="Age" />
+      <TextField fx:id="mark" layoutX="33.0" layoutY="260.0" prefHeight="40.0" prefWidth="239.0" promptText="Mark" />
+      <TableView fx:id="ds" layoutX="309.0" layoutY="133.0" prefHeight="421.0" prefWidth="478.0" style="-fx-border-color: orange;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
          <columns>
-            <TableColumn fx:id="tenSV" onEditCommit="#onEditName" prefWidth="235.0" text="TenSV" />
-            <TableColumn fx:id="tuoiSV" minWidth="0.0" onEditCommit="#onEditAge" prefWidth="104.0" text="Tuoi" />
-            <TableColumn fx:id="diemSV" onEditCommit="#onEditMark" prefWidth="139.0" text="Diem Thi" />
+            <TableColumn fx:id="tenSV" prefWidth="235.0" text="TenSV" />
+            <TableColumn fx:id="tuoiSV" minWidth="0.0" prefWidth="104.0" text="Tuoi" />
+            <TableColumn fx:id="diemSV" prefWidth="139.0" text="Diem Thi" />
          </columns>
       </TableView>
-      <Button layoutX="630.0" layoutY="285.0" mnemonicParsing="false" onAction="#add" style="-fx-background-color: #45caeb;" text="Add" textFill="WHITE" />
+      <Button layoutX="33.0" layoutY="328.0" mnemonicParsing="false" onAction="#add" prefHeight="31.0" prefWidth="57.0" style="-fx-background-color: #45caeb;" text="Add" textFill="WHITE" />
       <Text fx:id="validate" disable="true" fill="RED" layoutX="33.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.6708984375" />
+      <Button fx:id="update" layoutX="215.0" layoutY="328.0" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="57.0" style="-fx-background-color: #45caeb;" text="Update" textFill="WHITE" />
+      <Button fx:id="sort" layoutX="124.0" layoutY="328.0" mnemonicParsing="false" onAction="#sort" prefHeight="31.0" prefWidth="57.0" style="-fx-background-color: #45caeb;" text="Sort" textFill="WHITE" />
+      <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="57.0" style="-fx-background-color: gray; -fx-font-weight: 700;" text="&lt;--" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="name1" disable="true" layoutX="33.0" layoutY="83.0" prefHeight="40.0" prefWidth="239.0" promptText="Name" />
    </children>
 </Pane>
